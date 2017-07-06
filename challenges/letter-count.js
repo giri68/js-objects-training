@@ -31,3 +31,24 @@
 */
 
 // YOUR CODE HERE
+
+var str = "apple";
+
+var counts = {};
+
+var ch, index, len, count;
+var str1 = str.toLowerCase();
+
+for (index = 0, len = str.length; index < len; ++index) {
+
+    ch = str1.charAt(index);
+
+    count = counts[ch];
+    console.log(count);
+    console.log(ch)
+    if (count){counts[ch] = count + 1}
+    else {counts[ch] = 1};
+
+}
+
+counts;

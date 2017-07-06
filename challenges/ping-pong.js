@@ -38,3 +38,26 @@
 */
 
 // YOUR CODE HERE
+var table = [{steps: 0}, null, null, null];
+
+function pingpong(array){
+  for (var i = 0; i < array.length; i++){
+    if (array[i]){
+      if (i !== array.length-1){
+      array[i+1]=array[i];
+      array[i]=null;
+      break;
+      } else {
+        array[i-1] = array[i];
+        array[i] = null;
+        break;
+      }
+    }
+  }
+  return array
+}
+pingpong(table)
+pingpong(table)
+pingpong(table)
+pingpong(table)
+pingpong(table)

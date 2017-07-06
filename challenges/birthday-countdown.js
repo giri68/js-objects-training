@@ -34,3 +34,32 @@
 */
 
 // YOUR CODE HERE
+function daysUntilDate(date{
+  return (date - Date.now()) / (1000*3600 * 24)
+}
+
+
+newarray = [];
+  function birthTest(array){
+      for (let i = 0; i < array.length; i++){
+          var diff = new Date() - new Date(array[i].dob);
+          var day = Math.ceil((diff/(1000*36*24)) % 365);
+          var str = array[i].name + '\'s birthday is in ' + day
++ ' days'
+newarray.push(str);
+    }
+    return newarray
+}
+let birth = [
+    {
+      name: "Jack",
+      dob: "10/31/2013"
+    },
+    {
+      name: "Jill",
+      dob: "4/01/1975"
+    }
+  ]
+
+
+birthTest(birth)
